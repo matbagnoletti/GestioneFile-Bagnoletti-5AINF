@@ -27,7 +27,7 @@ Il progetto è composto da 6 classi:
 - [**Matrice**](src/gestionefile/Matrice.java): classe utilizzata da [**Vigenere**](src/gestionefile/Vigenere.java).
 
 ## Crediti
-Il presente progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
+Questo progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
 
 ## Licenza d'uso
-La seguente repository (e tutte le sue versioni) sono rilasciate sotto la [**MB General Copyleft License**](LICENSE).
+Questo progetto (e tutte le sue versioni) sono rilasciati sotto la [**MB General Copyleft License**](LICENSE).
