@@ -15,3 +15,7 @@
 > Tipologia: `Java Project` (originato in NetBeans e gestito in IntelliJ IDEA)
 >
 > Licenza d'uso: vedi il file [**LICENSE**](LICENSE)
+
+## Struttura del progetto
+
+Percorso della cartella contenente il codice sorgente: `/GestioneFile-master/src`.

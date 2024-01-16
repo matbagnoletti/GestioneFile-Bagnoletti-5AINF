@@ -34,6 +34,7 @@ public class Lettore extends Thread{
             //3) chiudo il file
             fr.close();
         } catch (IOException ex) {
+            System.err.println(ex.getMessage());
             System.err.println("Errore in lettura!");
         }
     }

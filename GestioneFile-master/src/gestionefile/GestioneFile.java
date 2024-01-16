@@ -13,12 +13,12 @@ public class GestioneFile {
     public static void main(String[] args) {
         
         //1)LETTURA
-        Lettore lettore = new Lettore("user.json");
+        Lettore lettore = new Lettore("GestioneFile-master/src/gestionefile/user.json");
         lettore.start();
         //2)ELABORAZIONE
         
         //3) SCRITTURA
-        Scrittore scrittore = new Scrittore("output.csv");
+        Scrittore scrittore = new Scrittore("GestioneFile-master/src/gestionefile/output.csv/output.csv");
         Thread threadScrittore = new Thread(scrittore);
         threadScrittore.start();
     }
