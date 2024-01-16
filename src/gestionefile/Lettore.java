@@ -11,9 +11,15 @@ import java.io.IOException;
  */
 
 public class Lettore extends Thread{
+    /**
+     * Nome del file da leggere
+     */
     String nomeFile;
+    /**
+     * Se true, legge il file e lo mostra in output, altrimenti lo copia nel file copia.csv
+     */
     boolean console;
-    
+
     public Lettore(boolean console, String nomeFile){
         this.nomeFile = nomeFile;
         this.console = console;

@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 public class GestioneFile {
 
     /**
-     * @param args the command line arguments
+     * @param args parametri da linea di comando
      */
     public static void main(String[] args) {
         

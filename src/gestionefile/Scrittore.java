@@ -14,13 +14,14 @@ import java.util.logging.Logger;
  */
 
 public class Scrittore implements Runnable{
-
+    /**
+     * Nome del file da scrivere
+     */
     String nomeFile;
+    /**
+     * Testo da scrivere nel file
+     */
     String testo;
-
-    public Scrittore(String nomeFile){
-        this.nomeFile = nomeFile;
-    }
 
     public Scrittore(String nomeFile, String testo) {
         this.nomeFile = nomeFile;
