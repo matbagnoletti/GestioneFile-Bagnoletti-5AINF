@@ -9,15 +9,22 @@ import java.util.logging.Logger;
 /**
  *
  * @author MC
- * @version 12/01/23
+ * @author (fork) Matteo Bagnoletti Tini
+ * @version 16/01/23
  */
 
 public class Scrittore implements Runnable{
 
     String nomeFile;
-    
+    String testo;
+
     public Scrittore(String nomeFile){
         this.nomeFile = nomeFile;
+    }
+
+    public Scrittore(String nomeFile, String testo) {
+        this.nomeFile = nomeFile;
+        this.testo = testo;
     }
     
     @Override
@@ -35,10 +42,10 @@ public class Scrittore implements Runnable{
             br = new BufferedWriter(
                     new FileWriter(nomeFile));
             //2) scrivo nel buffer
-            br.write("File in output");
+            br.write(this.testo);
             br.write("\n\r");
             //3) svuoto il buffer e salvo nel file i dati
-            br.flush();         
+            br.flush();
         } catch (IOException ex) {
             Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
         }

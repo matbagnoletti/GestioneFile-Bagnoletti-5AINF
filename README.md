@@ -15,3 +15,5 @@
 > Tipologia: `Java Project` (originato in NetBeans e gestito in IntelliJ IDEA)
 >
 > Licenza d'uso: vedi il file [**LICENSE**](LICENSE)
+> 
+> Crediti: il presente progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
