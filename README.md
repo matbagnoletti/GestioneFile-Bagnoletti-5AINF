@@ -13,10 +13,6 @@
 > Istituto: [**ITTS A. Volta**](https://www.avoltapg.edu.it/), Perugia (PG), Italia
 >
 > Tipologia: `Java Project` (originato in NetBeans e gestito in IntelliJ IDEA)
->
-> Licenza d'uso: vedi il file [**LICENSE**](LICENSE)
-> 
-> Crediti: il presente progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
 
 ## Descrizione
 Questo progetto è un'applicazione Java che permette di gestire in lettura e scrittura diversi file di testo utilizzando stream di byte e di caratteri.
@@ -29,3 +25,9 @@ Il progetto è composto da 6 classi:
 - [**Cifrario**](src/gestionefile/Cifrario.java): classe che contiene i metodi per cifrare e decifrare un messaggio di testo (in questo caso la password).
 - [**Vigenere**](src/gestionefile/Vigenere.java): classe utilizzata da [**Cifrario**](src/gestionefile/Cifrario.java).
 - [**Matrice**](src/gestionefile/Matrice.java): classe utilizzata da [**Vigenere**](src/gestionefile/Vigenere.java).
+
+## Crediti
+Il presente progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
+
+## Licenza d'uso
+La seguente repository (e tutte le sue versioni) sono rilasciate sotto la [**MB General Copyleft License**](LICENSE).
