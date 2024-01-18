@@ -92,6 +92,15 @@ public class GestioneFile {
         } catch (InterruptedException ex) {
             System.err.println("Errore nel metodo join()");
         }
+
+        //ISSUE #4
+        // scrittura
+        User user1 = new User(1, "Matteo", "Bagnoletti Tini", "Studente");
+        user1.scriviOggettoSuFile("src/gestionefile/userObject.ser");
+
+        //lettura
+        User user2 = new User("src/gestionefile/userObject.ser");
+        System.out.println(user2);
     }
     
 }
