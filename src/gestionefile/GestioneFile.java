@@ -1,8 +1,6 @@
 package gestionefile;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 
 /**
  *
@@ -16,14 +14,14 @@ public class GestioneFile {
      * @param args parametri da linea di comando
      */
     public static void main(String[] args) {
-        
+
         //1)LETTURA
         Lettore lettore = new Lettore(true, "src/gestionefile/user.json");
         lettore.start();
         try {
             lettore.join();
         } catch (InterruptedException ex) {
-            System.err.println("Errore nel metodo join()");
+            System.err.println("Errore nel metodo join() - riga 24");
         }
         //2)ELABORAZIONE
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -33,13 +31,13 @@ public class GestioneFile {
         try {
             username = reader.readLine();
         } catch (IOException ex) {
-            System.err.println("Errore nella lettura da tastiera dello username");
+            System.err.println("Errore nella lettura da tastiera dello username - riga 34");
         }
         System.out.print("Inserisci una password: ");
         try {
             password = reader.readLine();
         } catch (IOException ex) {
-            System.err.println("Errore nella lettura da tastiera della password");
+            System.err.println("Errore nella lettura da tastiera della password - riga 40");
         }
 
         /* valore di default */
@@ -48,7 +46,7 @@ public class GestioneFile {
         try {
             verme = reader.readLine();
         } catch (IOException ex) {
-            System.err.println("Errore nella lettura da tastiera del verme");
+            System.err.println("Errore nella lettura da tastiera del verme - riga 49");
         }
         Cifrario cifrario = new Cifrario(verme);
         password = cifrario.cifra(password);
@@ -56,7 +54,7 @@ public class GestioneFile {
         try {
             reader.close();
         } catch (IOException ex) {
-            System.err.println("Errore nella chiusura del buffer di lettura");
+            System.err.println("Errore nella chiusura del buffer di lettura - riga 57");
         }
 
         //3) SCRITTURA
@@ -67,7 +65,7 @@ public class GestioneFile {
         try {
             threadScrittore.join();
         } catch (InterruptedException ex) {
-            System.err.println("Errore nel metodo join()");
+            System.err.println("Errore nel metodo join() - riga 68");
         }
 
         //4) COPIA
@@ -77,6 +75,16 @@ public class GestioneFile {
             lettore_copia.join();
         } catch (InterruptedException ex) {
             System.err.println("Errore nel metodo join()");
+        }
+
+        //ISSUE #3
+        try (DataInputStream input = new DataInputStream(new FileInputStream("src/gestionefile/user.csv"))) {
+            String line;
+            while ((line = input.readLine()) != null) {
+
+            }
+        } catch (IOException ex) {
+            System.err.println("Errore nella lettura del file - riga 88");
         }
     }
     

@@ -36,12 +36,8 @@ public class Scrittore implements Runnable{
      * Scrive un file di testo usando la classe BufferedWriter
      */
     public void scrivi(){
-        BufferedWriter br=null;
-        
-        try {
-            //1) apro il file
-            br = new BufferedWriter(
-                    new FileWriter(nomeFile));
+        //1) apro il file
+        try (BufferedWriter br = new BufferedWriter(new FileWriter(nomeFile))) {
             //2) scrivo nel buffer
             br.write(this.testo);
             br.write("\n\r");
@@ -50,15 +46,6 @@ public class Scrittore implements Runnable{
         } catch (IOException ex) {
             Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
         }
-        finally{
-            if (br!=null)
-                try {
-                    //4)chiudo lo stream in uscita
-                    br.close();
-            } catch (IOException ex) {
-                Logger.getLogger(Scrittore.class.getName()).log(Level.SEVERE, null, ex);
-            }
-                
-        }
+        //4) il finally non è necessario perché il try-with-resources chiude automaticamente il file
     }
 }

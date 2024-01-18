@@ -30,18 +30,15 @@ public class Lettore extends Thread{
      * e lo mostra in output
      */
     public void leggi(){
-        FileReader fr;
-        int i; 
-        try { 
-            //1) apro il file
-            fr = new FileReader(nomeFile);
+        int i;
+        //1) apro il file
+        try (FileReader fr = new FileReader(nomeFile)) {
             //2) leggo carattere per carattere e lo stampo 
-            while ((i=fr.read()) != -1)
+            while((i = fr.read()) != -1)
                 System.out.print((char) i);
-            
+
             System.out.print("\n\r");
-            //3) chiudo il file
-            fr.close();
+            //3) la chiusura del file è automatica
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
             System.err.println("Errore in lettura!");
@@ -49,19 +46,16 @@ public class Lettore extends Thread{
     }
 
     public void copia(){
-        FileReader fr;
         StringBuilder contenuto = new StringBuilder();
         int i;
-        try {
-            //1) apro il file
-            fr = new FileReader(nomeFile);
+        //1) apro il file
+        try (FileReader fr = new FileReader(nomeFile)){
             //2) leggo carattere per carattere e lo stampo
             while ((i=fr.read()) != -1)
                 contenuto.append((char) i);
 
             System.out.print("\n\r");
-            //3) chiudo il file
-            fr.close();
+            //3) la chiusura del file è automatica
         } catch (IOException ex) {
             System.err.println(ex.getMessage());
             System.err.println("Errore in lettura!");
