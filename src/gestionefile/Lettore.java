@@ -1,7 +1,6 @@
 package gestionefile;
 
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  *
@@ -45,6 +44,22 @@ public class Lettore extends Thread{
         }
     }
 
+    public void leggiCSV () {
+        /* utilizzando la classe DataInputStream leggendo ogni riga come stringa UTF */
+        try (DataInputStream lettore = new DataInputStream(new FileInputStream(nomeFile))) {
+            String line;
+            while (true) {
+                line = lettore.readUTF();
+                System.out.print(line);
+            }
+        } catch (EOFException ignored) {
+            /* non c'è più niente da leggere */
+        } catch (IOException ex) {
+            System.err.println(ex.getMessage());
+            System.err.println("Errore in lettura!");
+        }
+    }
+
     public void copia(){
         StringBuilder contenuto = new StringBuilder();
         int i;
@@ -73,10 +88,11 @@ public class Lettore extends Thread{
     
 
     public void run(){
-        if(this.console){
+        if (this.nomeFile.contains("user.csv")) {
+            leggiCSV();
+        } else if (this.console){
             leggi();
-        }
-        else{
+        } else {
             copia();
         }
     }

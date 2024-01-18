@@ -45,6 +45,7 @@ public class GestioneFile {
         System.out.print("Inserisci una chiave di cifratura: ");
         try {
             verme = reader.readLine();
+            verme = verme.toUpperCase();
         } catch (IOException ex) {
             System.err.println("Errore nella lettura da tastiera del verme - riga 49");
         }
@@ -78,13 +79,18 @@ public class GestioneFile {
         }
 
         //ISSUE #3
-        try (DataInputStream input = new DataInputStream(new FileInputStream("src/gestionefile/user.csv"))) {
-            String line;
-            while ((line = input.readLine()) != null) {
+        // Scrittura file CSV
+        Scrittore scrittoreCSV = new Scrittore("src/gestionefile/user.csv", new String[]{"1", "Matteo", "Bagnoletti Tini", "Studente"});
+        Thread threadScrittoreCSV = new Thread(scrittoreCSV);
+        threadScrittoreCSV.start();
 
-            }
-        } catch (IOException ex) {
-            System.err.println("Errore nella lettura del file - riga 88");
+        // Lettura file CSV
+        Lettore lettoreCSV = new Lettore(false, "src/gestionefile/user.csv");
+        lettoreCSV.start();
+        try {
+            lettoreCSV.join();
+        } catch (InterruptedException ex) {
+            System.err.println("Errore nel metodo join()");
         }
     }
     
