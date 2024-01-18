@@ -18,13 +18,14 @@
 Questo progetto è un'applicazione Java che permette di gestire in lettura e scrittura diversi file di testo utilizzando stream di byte e di caratteri.
 
 ## Struttura
-Il progetto è composto da 6 classi:
+Il progetto è composto da 7 classi:
 - [**GestioneFile**](src/gestionefile/GestioneFile.java): classe principale che contiene il metodo `main`.
 - [**Lettore**](src/gestionefile/Lettore.java): classe che contiene i metodi per leggere un file di testo e stamparne il contenuto sulla console o copiarlo in un altro file.
 - [**Scrittore**](src/gestionefile/Scrittore.java): classe che contiene i metodi per scrivere un file di testo.
 - [**Cifrario**](src/gestionefile/Cifrario.java): classe che contiene i metodi per cifrare e decifrare un messaggio di testo (in questo caso la password).
 - [**Vigenere**](src/gestionefile/Vigenere.java): classe utilizzata da [**Cifrario**](src/gestionefile/Cifrario.java).
 - [**Matrice**](src/gestionefile/Matrice.java): classe utilizzata da [**Vigenere**](src/gestionefile/Vigenere.java).
+- [**User**](src/gestionefile/User.java): classe utilizzata per la serializzazione di un oggetto su di un file e la lettura da esso.
 
 ## Crediti
 Questo progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
