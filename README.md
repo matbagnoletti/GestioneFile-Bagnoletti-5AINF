@@ -22,7 +22,7 @@ Il progetto è composto da 7 classi:
 - [**User**](src/gestionefile/User.java): classe utilizzata per la serializzazione di un oggetto su di un file e la lettura da esso.
 
 ## Crediti
-Questo progetto è stato realizzato a partire dal progetto [**GestioneFile**](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
+Questo progetto è stato realizzato a partire dal progetto [GestioneFile](https://github.com/mciuchetti/GestioneFile.git) della prof.ssa Monica Ciuchetti.
 
 ## Licenza d'uso
-Questo progetto (e tutte le sue versioni) sono rilasciati sotto la [**MB General Copyleft License**](LICENSE).
+Questo progetto (e tutte le sue versioni) sono rilasciati sotto la [MB General Copyleft License](LICENSE).
