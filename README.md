@@ -1,18 +1,12 @@
-# GestioneFile-Bagnoletti-5AINF
+<h1 align="center">GestioneFile-Bagnoletti-5AINF</h1>
 
-> [!NOTE]
->
-> Autore: [**Matteo Bagnoletti Tini**](https://github.com/matbagnoletti)
->
-> Docente: [**prof.ssa Monica Ciuchetti**](https://github.com/mciuchetti)
->
-> Docente di laboratorio: prof.ssa Ilaria Fioroni
->
-> Corso: TPSIT 5AINF a.s. 2023/2024
->
-> Istituto: [**ITTS A. Volta**](https://www.avoltapg.edu.it/), Perugia (PG), Italia
->
-> Tipologia: `Java Project` (originato in NetBeans e gestito in IntelliJ IDEA)
+<p align="center" style="font-family: monospace">Made by <a href="https://github.com/matbagnoletti">@matbagnoletti</a></p>
+<p align="center" style="font-family: monospace">Docenti: prof.ssa <a href="https://github.com/matbagnoletti">@mciuchetti</a> e prof.ssa Fioroni</p>
+<p align="center" style="font-family: monospace">Corso TPSIT a.s. 2023/2024, <a href="https://www.avoltapg.edu.it/">ITTS A. Volta (PG)</a></p>
+<p align="center">
+    <img src="https://img.shields.io/github/last-commit/matbagnoletti/JavaFileManager?style=for-the-badge" alt="Ultimo commit">
+    <img src="https://img.shields.io/github/languages/top/matbagnoletti/JavaFileManager?style=for-the-badge" alt="Linguaggio">
+</p>
 
 ## Descrizione
 Questo progetto è un'applicazione Java che permette di gestire in lettura e scrittura diversi file di testo utilizzando stream di byte e di caratteri.
